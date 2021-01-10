@@ -1,0 +1,21 @@
+﻿欢迎使用按键工具
+Sleep 1000
+{enter}
+Sleep 3000
+下面执行替换：
+Sleep 1000
+{enter}
+Sleep 3000
+^h  //按下Ctrl+H，弹出替换对话框
+Sleep 1000
+使用//上面输入使用
+Sleep 1000
+{tab}//切换
+Sleep 1000
+USE//下面输入Use
+Sleep 1000
+{tab 4}
+Sleep 1000
+{enter}
+Sleep 1000
+{esc}//关闭替换对话框
