@@ -1,4 +1,5 @@
 import pymysql
+from itertools import chain
 
 def get_information(sql,host, db,condition=None):
     # 链接数据库

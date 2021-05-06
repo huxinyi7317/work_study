@@ -17,4 +17,7 @@ class QuickstartUser(HttpUser):
 
     def on_start(self):
         self.client.post("/login", {"username":"foo", "password":"bar"})
+if __name__=="__main__":
 
+    import os
+    os.system("locust -f godemo.py --host=http://xx.api.xxxxx.net")
