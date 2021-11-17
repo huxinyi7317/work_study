@@ -19,7 +19,6 @@ def get_information(sql,host, db,condition=None):
       resultlist=cur.fetchone()
     else:
       data1 = cur.fetchall()
-      resultlist = list(chain.from_iterable(data1))
     # print(f"数据对象:{resultlist}")
     cur.close()
     conn.close()
@@ -27,9 +26,9 @@ def get_information(sql,host, db,condition=None):
 
 if __name__ == '__main__':
 
-  host = '192.168.188.12'
-  db = 'epodb_20201028'
-  sql = f"select phone  from backend_member where `status`='正常' GROUP BY phone having count(phone)>1"
+  host = '159.75.17.184'
+  db = 'weitshop'
+  sql = f"SELECT username FROM `jz_manager` WHERE mobile = 15179745797;"
   try:
     a=get_information(sql,host,db)
     b=tuple(a)

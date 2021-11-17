@@ -15,7 +15,7 @@ for n in range(workers):
     t = threading.Thread(target=hello, args=(n+1, sema, ))
     t.start()
  
-time.sleep(3)
-print('开启线程')
+    time.sleep(3)
+    print('开启线程')
 
 sema.release()

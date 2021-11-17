@@ -1,10 +1,11 @@
 
 import random
 from locust import HttpUser, task, between
+import requests
 
 class QuickstartUser(HttpUser):
     wait_time = between(5, 9)
-
+    
     @task
     def index_page(self):
         self.client.get("/hello")  # 这里的地址需要排除 host 部分
@@ -17,4 +18,5 @@ class QuickstartUser(HttpUser):
 
     def on_start(self):
         self.client.post("/login", {"username":"foo", "password":"bar"})
-
+if __name__=="__main__":
+    Host = "http://127.0.0.1:8000"
